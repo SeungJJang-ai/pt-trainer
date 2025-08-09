@@ -1,0 +1,50 @@
+{
+  "gym_name": "Your Gym",
+  "has": {
+    "back": [
+      "Pull-up",
+      "Lat Pulldown",
+      "Seated Row (wide/neutral/narrow)",
+      "T-Bar Row",
+      "Smith Barbell Row",
+      "Rotary Pulldown",
+      "Straight-Arm Pulldown (Cable)"
+    ],
+    "chest": [
+      "Smith Incline Bench Press",
+      "Incline Bench Press Machine",
+      "Chest Press Machine",
+      "Pec Deck",
+      "Cable Chest Fly",
+      "Dips"
+    ],
+    "legs": [
+      "Inner Thigh (Adductor)",
+      "Outer Thigh (Abductor)",
+      "Seated Leg Curl",
+      "Seated Leg Press (if used)",
+      "Smith Calf Raise"
+    ],
+    "shoulders": [
+      "Shoulder Press Machine",
+      "Side Lateral Raise Machine",
+      "Reverse Pec Deck",
+      "Smith Overhead Press",
+      "Cable Lateral Raise"
+    ],
+    "arms": [
+      "EZ-Bar Curl",
+      "Arm Curl Machine",
+      "Hammer Curl (DB/Cable)",
+      "Rope Pushdown",
+      "Lying Triceps Extension",
+      "DB Overhead Extension"
+    ],
+    "cardio": [
+      "Treadmill",
+      "Bike",
+      "Stairmill"
+    ]
+  },
+  "notes": "Knee-safe mode preferred (meniscus). Prioritize seated/lying and avoid deep knee flexion."
+}
