@@ -20,11 +20,11 @@ def get_conn():
 def get_last_best(exercise:str, lookback_days:int=120):
     conn = get_conn()
     df = pd.read_sql_query(
-        \"\"\"SELECT date, exercise, MAX(weight) AS max_w, MAX(reps) AS max_r
+        """SELECT date, exercise, MAX(weight) AS max_w, MAX(reps) AS max_r
                FROM sets s JOIN workouts w ON s.workout_id=w.id
                WHERE exercise=? AND date >= ?
                GROUP BY date, exercise
-               ORDER BY date DESC\"\"\",
+               ORDER BY date DESC""",
         conn, params=(exercise, (dt.date.today()-dt.timedelta(days=lookback_days)).isoformat())
     )
     conn.close()
@@ -48,10 +48,10 @@ def save_workout(split:str, injury_flags:str, notes:str, rows:list):
 def fetch_history(n_days:int=60):
     conn = get_conn()
     df = pd.read_sql_query(
-        \"\"\"SELECT w.date, w.split, s.exercise, s.bodypart, s.weight, s.reps, s.rpe
+        """SELECT w.date, w.split, s.exercise, s.bodypart, s.weight, s.reps, s.rpe
                FROM workouts w JOIN sets s ON w.id=s.workout_id
                WHERE date >= ?
-               ORDER BY w.date DESC, s.exercise\"\"\", conn,
+               ORDER BY w.date DESC, s.exercise""", conn,
         params=((dt.date.today()-dt.timedelta(days=n_days)).isoformat(),))
     conn.close()
     return df
